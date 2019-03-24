@@ -1,0 +1,20 @@
+filename = 'learning_python.txt'
+
+with open(filename) as file_object:
+    contents = file_object.read()
+    print("\nFor the 1st time:")
+    print(contents)
+    
+with open(filename) as file_object:
+    print("\nFor the 2nd time:")
+    for line in file_object:
+        print(line.rstrip())
+        
+with open(filename) as file_object:
+    print("\nFor the 3rd time:")
+    lines = file_object.readlines()
+    
+string = ''
+for line in lines:
+    string += line
+print(string)
