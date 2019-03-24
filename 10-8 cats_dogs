@@ -1,0 +1,13 @@
+filename_cat = 'cats.txt'
+filename_dog = 'dogs.txt'
+
+try:
+    with open(filename_cat) as f_cat:
+        for cat in f_cat:
+            print(cat.rstrip())
+    with open(filename_dog) as f_dog:
+        for dog in f_dog:
+            print(dog.rstrip())
+except FileNotFoundError:
+    msg = "Sorry, the file " + filename_cat +" doesn't exist."
+    print(msg)
