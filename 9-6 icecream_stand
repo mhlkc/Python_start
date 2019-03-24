@@ -1,0 +1,36 @@
+class Restaurant():
+#    """模拟餐厅"""
+    
+    def __init__(self,restaurant_name,cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        
+    def describe_restaurant(self):
+        print("good")
+        print("fancy")
+        
+    def open_restaurant(self):
+        print("open")
+        
+    def describe(self):
+        print("You are in restaurant:" + self.restaurant_name + 
+              ",The cuisine type is:" + self.cuisine_type)
+        
+class IceCreamStand(Restaurant):
+#    """冰淇淋店的独特之处"""
+    
+    def __init__(self,restaurant_name,cuisine_type):
+        super().__init__(restaurant_name,cuisine_type)
+        IceCreamStand.flavors = ['a','b','c']
+        
+    def get_descriptive_name(self):
+        """返回整洁的描述性信息"""
+        
+        print("We serve " + str(len(self.flavors)) + "kinds of ice-cream")
+        for flavor in self.flavors:
+                print(flavor)
+        
+my_icecreamstand = IceCreamStand('K',"China")
+my_icecreamstand.describe()
+my_icecreamstand.get_descriptive_name()
+
