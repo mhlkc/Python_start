@@ -1,0 +1,22 @@
+print("Give me two numbers and I'll add them.")
+print("Enter 'q' to quit")
+
+while True:
+    try:
+        first_number = input("\nFirst Number:")
+        first_number = int(first_number)
+        if first_number == 'q':
+            break
+    
+        second_number = input("\nSecond Number:")
+        second_number = int(second_number)
+        if second_number == 'q':
+            break
+    
+    except ValueError:
+        print("You can only enter number!")
+    else:
+        answer = first_number + second_number
+        print("The sum of " + str(first_number) 
+        + " and " + str(second_number) + " is " + str(answer) + ".")
+
