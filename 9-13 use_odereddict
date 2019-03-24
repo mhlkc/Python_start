@@ -1,0 +1,12 @@
+from collections import OrderedDict
+
+Dictionary = OrderedDict()
+Dictionary = {
+    'for':'循环',
+    'equal':'相等',
+    'if':'条件',
+    'in':'存在',
+    'class':'类',
+        }
+for name,discription in Dictionary.items():
+    print(name.title() + " and " + discription)
