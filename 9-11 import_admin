@@ -1,0 +1,4 @@
+import privileges
+
+myadmin = privileges.Admin('c','s')
+myadmin.privileges.show_privileges()
