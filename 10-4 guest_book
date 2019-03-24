@@ -1,0 +1,13 @@
+
+filename = 'guest_book.txt'
+
+active = True
+while active:
+    name = input("Please enter your name or press q to quit:")
+    if name != 'q':
+        print("Hello!" + name)
+        with open(filename,'a') as file_object:
+            file_object.write(name + '\n')
+    else:
+        active = False
+
