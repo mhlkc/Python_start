@@ -1,0 +1,23 @@
+"""city_functions.py"""
+def get_city_country_name(city,country,population=''):
+    if population:
+        full = city +',' + country + '-'  + population
+    else:
+        full = city +',' + country
+    return full.title()
+
+"""test_cities.py"""
+import unittest
+from city_functions import get_city_country_name
+
+class CityCountryTestCase(unittest.TestCase):
+    """测试city_functions.py"""
+    
+    def test_city_country(self):
+        full = get_city_country_name('santiago','chile')
+        self.assertEqual(full,'Santiago,Chile')
+        
+    def test_city_country_population(self):
+        full = get_city_country_name('santiago','chile','population 5000000')
+        self.assertEqual(full,'Santiago,Chile-Population 5000000')
+unittest.main()
